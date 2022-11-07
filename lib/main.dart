@@ -39,19 +39,22 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Colors.amberAccent,
         title: const Text('My mobile app'),
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Question(
-            questions[_questionIndex],
-          ),
-          ElevatedButton(
-              onPressed: _answerQustion, child: const Text('Answer 1')),
-          ElevatedButton(
-              onPressed: _answerQustion, child: const Text('Answer 2')),
-          ElevatedButton(
-              onPressed: _answerQustion, child: const Text('Answer 3'))
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Question(
+              questions[_questionIndex],
+            ),
+            ElevatedButton(
+                onPressed: _answerQustion, child: const Text('Answer 1')),
+            ElevatedButton(
+                onPressed: _answerQustion, child: const Text('Answer 2')),
+            ElevatedButton(
+                onPressed: _answerQustion, child: const Text('Answer 3'))
+          ],
+        ),
       ),
     ));
   }
